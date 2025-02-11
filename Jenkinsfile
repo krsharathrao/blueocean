@@ -9,14 +9,14 @@ pipeline {
 
     stage('install apache & start apache') {
       steps {
-        sh '''sh \'\'\'sudo apt install -y apache2 
-sudo service apache2 start\'\'\''''
+        sh '''sudo apt install -y apache2 
+sudo service apache2 start'''
       }
     }
 
     stage('deploy app') {
       steps {
-        sh 'sh \'sudo cp -R * /var/www/html/\''
+        sh 'sudo cp -R * /var/www/html/'
       }
     }
 
